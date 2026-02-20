@@ -230,7 +230,7 @@ struct KernelParams
 
     // The pre-activation scaling factor (typically dequantA * dequantB) for non-gated non-linear
     // activation.
-    // Only used when non-linear activation is applied (e.g., GELU, Relu2).
+    // Only used when non-linear activation is applied (e.g., GELU, Relu2, Silu).
     // When used, scaleC should be quantScaleC only, and this scale is applied before the
     // activation. Shape is [B].
     float const* ptrScaleAct{nullptr};
@@ -549,7 +549,7 @@ struct KernelParams
     //////////////////////////////////////////////////////////////////////////////////////////////////
 
     // Global counter for SW-emulated dynamic tile scheduling. When dynamic scheduling is enabled,
-    // Must be initialized to the number equal to the grid size before each kernel launch.
+    // Must be intialized to the number equal to the grid size before each kernel launch.
     // Set to nullptr if static scheduling is used.
     // Shape is [1].
     uint32_t* ptrDynamicTileCounter{nullptr};
