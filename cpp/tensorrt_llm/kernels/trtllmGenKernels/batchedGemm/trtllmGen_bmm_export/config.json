@@ -413,7 +413,8 @@
             "routeAct": "tma",
             "fusedAct,eltwiseActType": [
                 [true, "none"],
-                [false, "relu2"]
+                [false, "relu2"],
+                [false, "silu"]
             ],
             "usePerTokenSfB": true,
             "useUnrollLoop2xForMma": [true, false],
@@ -435,7 +436,8 @@
             "routeAct": "tma",
             "fusedAct,eltwiseActType": [
                 [true, "none"],
-                [false, "relu2"]
+                [false, "relu2"],
+                [false, "silu"]
             ],
             "usePerTokenSfB": true,
             "numRegsPerThreadNonEpilogueWarp": 56,
