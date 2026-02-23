@@ -549,7 +549,7 @@ struct KernelParams
     //////////////////////////////////////////////////////////////////////////////////////////////////
 
     // Global counter for SW-emulated dynamic tile scheduling. When dynamic scheduling is enabled,
-    // Must be intialized to the number equal to the grid size before each kernel launch.
+    // Must be initialized to the number equal to the grid size before each kernel launch.
     // Set to nullptr if static scheduling is used.
     // Shape is [1].
     uint32_t* ptrDynamicTileCounter{nullptr};
