@@ -1437,7 +1437,7 @@ class AutoTuner:
             return torch.randint(-5, 5, shapes,
                                  device=device).to(torch.uint8).view(dtype)
         else:
-            return torch.randint(-5, 5, shapes, device=device).to(dtype)
+            return (torch.rand(shapes, device=device) * 10 - 5).to(dtype)
 
     def _prepare_input_tensors(
             self, profile: OptimizationProfile,
